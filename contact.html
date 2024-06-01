@@ -9,7 +9,40 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        .contact-form label,
+        .contact-form input,
+        .contact-form textarea {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -20,18 +53,43 @@
         <a href="news.html">News</a>
         <a href="awards.html">Awards</a>
         <a href="contact.html">Contact</a>
-
     </div>
 
     <div id="container">
-        <div class="container">
-            <h2>Contact Information</h2>
-            <p>
-                <strong>Location:</strong> Department of Electrical Engineering<br />
-                Indian Institute of Technology, Madras <br />
-                <strong>Phone:</strong> [To be updated soon] <br />
-                <strong>Email:</strong> [To be updated soon] 
-            </p>
+        <div id="container">
+            <div class="container">
+                <h2>Contact Information</h2>
+                <p>
+                    <strong>Location:</strong><br />
+                    Department of Electrical Engineering<br />
+                    Indian Institute of Technology, Madras <br /><br />
+                    
+                    <strong>Phone:</strong><br />
+                    [To be updated soon] <br /><br />
+                    
+                    <strong>Email:</strong><br />
+                    [To be updated soon]
+                </p>
+            </div>
+        
+            <div class="container">
+                <h3>Contact Form</h3>
+                <form class="contact-form" action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 
