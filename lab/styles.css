@@ -1,159 +1,127 @@
-/* General Styles */
+/* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    width: 100%;
-    padding: 12px 12px;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
     overflow-x: hidden;
-    color: #333;
-    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Container */
 .container {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    box-shadow: none;
-    text-align: left;
-    background: #FFFFFF;
-    padding: 0 20px;
-    border-radius: 0;
-    z-index: 1;
-    overflow-x: hidden;
-    background-color: transparent; /* Removed the demarcation */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #004080, #00224e);
+    background: linear-gradient(to right, #003366, #004080);
     color: white;
+    padding: 40px 0;
     text-align: center;
-    padding: 20px 20px;
-    overflow-x: hidden;
 }
-.header .lab-title {
-    overflow-x: hidden;
+.lab-title {
     font-size: 2.5rem;
-    margin: 50;
-    text-align: center;
+    margin: 0;
 }
-.header .subtitle {
-    overflow-x: hidden;
+.subtitle {
     font-size: 1.2rem;
     margin-top: 10px;
-    text-align: center;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    overflow-x: hidden;
-
+    background-color: #002b5c;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-.navbar .nav-links {
+.nav-links {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0;
     padding: 0;
-    overflow-x: hidden;
-
 }
-.navbar .nav-links li {
-    margin: 0 15px;
+.nav-links li {
+    margin: 0 20px;
 }
-.navbar .nav-links a {
+.nav-links a {
     color: white;
-    text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    transition: color 0.3s;
-    
+    transition: color 0.3s ease-in-out;
 }
-.navbar .nav-links a:hover {
-    color: #007bff;
-}
-
-/* Hero Section */
-.hero {
-    background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-}
-.hero h2 {
-    font-size: 2rem;
-    margin: 0;
-}
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+.nav-links a:hover {
+    color: #00bfff;
 }
 
-/* Content Section */
+/* Content */
 .content {
-    text-align: center;
     background: white;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    padding: 60px 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 .content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #007bff;
+    font-size: 2rem;
+    border-bottom: 3px solid #007acc;
     display: inline-block;
-}
-.content p {
-    font-size: 1rem;
-    text-align: center;
     margin-bottom: 20px;
 }
 
-/* Research Cards */
+/* Cards */
 .research-cards {
     display: flex;
-    text-align: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 .card {
-    flex: 1 1 calc(33.333% - 20px);
-    background: #f9f9f9;
-    border-radius: 10px;
+    flex: 1 1 300px;
+    background: #fafafa;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
 }
 .card:hover {
     transform: translateY(-10px);
 }
 .card h3 {
-    color: #004080;
-    margin-top: 0;
+    color: #003366;
 }
 .card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+}
+
+/* People */
+.people-section h3 {
+    font-size: 1.4rem;
+    color: #004080;
+    margin-top: 30px;
+}
+.people-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.people-section li {
+    padding: 5px 0;
+    font-size: 1rem;
 }
 
 /* Footer */
 .footer {
-    background: #004080;
+    background-color: #002b5c;
     color: white;
     text-align: center;
     padding: 20px 0;
-}
-.footer p {
-    margin: 0;
     font-size: 0.9rem;
 }
